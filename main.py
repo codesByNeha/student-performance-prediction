@@ -1,6 +1,4 @@
 #  STUDENT PERFORMANCE PREDICTION PROJECT
-# Description: Predict students' final grades based on academic, 
-# social, and demographic factors using Machine Learning.
 
 import pandas as pd
 import numpy as np
@@ -48,7 +46,7 @@ X_train, X_test, y_train, y_test = train_test_split(
     X, y, test_size=0.2, random_state=42
 )
 
-print("\n✅ Data successfully split!")
+print("\n Data successfully split!")
 print("Training set size:", X_train.shape)
 print("Testing set size:", X_test.shape)
 
@@ -60,7 +58,7 @@ mae = mean_absolute_error(y_test, y_pred)
 mse = mean_squared_error(y_test, y_pred)
 r2 = r2_score(y_test, y_pred)
 
-print("\n📊 Model Evaluation Metrics:")
+print("\n Model Evaluation Metrics:")
 print("Mean Absolute Error:", round(mae, 2))
 print("Mean Squared Error:", round(mse, 2))
 print("R² Score:", round(r2, 2))
@@ -108,7 +106,7 @@ X_train, X_test, y_train, y_test = train_test_split(
 model.fit(X_train, y_train)
 y_pred = model.predict(X_test)
 r2_strong = r2_score(y_test, y_pred)
-print("\n✅ R² Score after Feature Selection:", round(r2_strong, 2))
+print("\n R² Score after Feature Selection:", round(r2_strong, 2))
 
 poly_model = make_pipeline(PolynomialFeatures(degree=2), LinearRegression())
 poly_model.fit(X_train, y_train)
