@@ -94,7 +94,7 @@ plt.tight_layout()
 plt.show()
 
 strong_features = correlation["G3"][correlation["G3"].abs() > 0.1].index
-print("\n🔹 Selected Strong Features:\n", strong_features)
+print("\n Selected Strong Features:\n", strong_features)
 
 X_strong = data[strong_features].drop('G3', axis=1)
 y = data['G3']
